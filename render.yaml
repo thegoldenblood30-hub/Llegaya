@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: llegaya-backend
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: H2_CONSOLE_ENABLED
+        value: "false"
+      - key: SPRING_JPA_SHOW_SQL
+        value: "false"
+      - key: SPRING_JPA_FORMAT_SQL
+        value: "false"
